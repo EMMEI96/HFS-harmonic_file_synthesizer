@@ -463,7 +463,7 @@ var env = {
 
 
 const impulses = ["FileConv","autoconv","impulse1","impulse2","impulse3","impulse4"];
-const impulses_ref =[myArrayBuffer2,smallBuffer,"","","",""];
+const impulses_ref =[myArrayBuffer2,smallBuffer,"https://github.com/EMMEI96/HFS-harmony_file_synthesizer/blob/master/impulses/impulse1.mp3","https://github.com/EMMEI96/HFS-harmony_file_synthesizer/blob/master/impulses/impulse.mp3","https://github.com/EMMEI96/HFS-harmony_file_synthesizer/blob/master/impulses/impulse3amp.mp3","https://github.com/EMMEI96/HFS-harmony_file_synthesizer/blob/master/impulses/impulse4.mp3"];
 
  var impulsesDropdown = document.getElementById("impulsesDropdown"); 
 
