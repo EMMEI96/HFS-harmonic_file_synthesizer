@@ -1,1 +1,1 @@
-# HFS-harmony_file_synthesizer
+# HFS-harmonic_file_synthesizer
