@@ -46,8 +46,6 @@ WebAudioControlsOptions={useMidi:1};
 
 
 
-
-
 const c = document.querySelector("#forCon")
 c.onchange = function(event) {
    var fileList = forCon.files;
@@ -92,8 +90,7 @@ i.onchange = function(event) {
         });
         wavesurfer.playPause();
          smallBuffer = buffer_role;
-        console.log(smallBuffer);
-        console.log(wavesurfer.backend.buffer)
+        
       })
     }
    }
@@ -166,8 +163,7 @@ save.onclick = function() {
   loadBuffer(smallBuffer)
   }
   
-  console.log("region status")
-  console.log(reversed)
+
   wavesurfer.playPause();
 }
 waveforming.onclick = function (){
@@ -327,7 +323,7 @@ function riversati() {
 
 
 function getData(url) {
-  console.log("starting")
+  
   var request = new XMLHttpRequest();
 
   request.open('GET', url, true);
@@ -336,10 +332,10 @@ function getData(url) {
 
   request.onload = function() {
     var audioData = request.response;
-    console.log("loadaed")
+    
     audioCtx.decodeAudioData(audioData, function(buffer) {
         myArrayBuffer2 = buffer;
-      console.log("loaded", data)
+      
 
       },
 
@@ -348,7 +344,7 @@ function getData(url) {
   }
   request.setRequestHeader("Content-Type","multipart/form-data");
   request.send();
-  console.log("loading")
+  
 }
 
 
@@ -493,7 +489,7 @@ const drywet = document.getElementById("drywet");
 drywet.oninput = function()
 {
   convolver.wet.value = drywet.value / 100;
-  console.log(convolver.wet.value);
+  
 }
 
 
@@ -883,7 +879,7 @@ createEnvelope() ;
 //using computer keyboard leads to some problems of the library. if setNote is used you need to reclick on the piano keyboard
 $(document).keyup(function(e) { 
 if (keyboard.keycodes1.indexOf(e.keyCode) >= 0){
-  console.log("b");
+  
     position = keyboard.keycodes1.indexOf(e.keyCode);
     keyboard.setNote(0,36+position + (dati[Mode.value][cadence.value][chord.value]["player1"])/100);
     keyboard.setNote(0,36+position + (dati[Mode.value][cadence.value][chord.value]["player2"])/100);
@@ -904,7 +900,7 @@ function actions(e){
   }
 
   if(e.target.id=="keyboard") {
-   str=e.type + " : " + e.target.id + " : [" + e.note + "] ";console.log(str);
+   str=e.type + " : " + e.target.id + " : [" + e.note + "] ";
    
    if(e.note[0]==1){
     playing=true;
@@ -944,12 +940,12 @@ function actions(e){
 }
 
 webAudioControlsMidiManager.addMidiListener(function(e) {
- console.log(e.data);
+ 
  if(smallBuffer){
    
   if(e.data[0]==144){
     playing = true;
-    console.log("b")
+    
    if(controller){
     if(notes[notes.length-1] != notes[notes.length-2]){
      envelope.triggerRelease();
