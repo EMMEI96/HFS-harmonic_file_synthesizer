@@ -769,8 +769,6 @@ function createPlayers(){
   impulses_ref[1] = smallBuffer;
   convolver = new Tone.Convolver(impulses_ref[impulse_selector]);
   convolver.wet.value = drywet.value / 100;
-
-  convolver.buffer =myArrayBuffer2;
   players=[];
   player1 = new Tone.GrainPlayer(smallBuffer);
   player2 = new Tone.GrainPlayer(smallBuffer);
@@ -788,8 +786,6 @@ function createPlayers(){
   }
   
   convolver.connect(Filter);
-  
- 
   
   Filter.getFrequencyResponse();
    Filter.connect(envelope);  
