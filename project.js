@@ -48,7 +48,7 @@ WebAudioControlsOptions={useMidi:1};
 
 const c = document.querySelector("#forCon")
 c.onchange = function(event) {
-   var fileList = forCon.files;
+   var fileList = c.files;
    var file;
    for (var i = 0; i < fileList.length; i++) {
      // get item
