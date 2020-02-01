@@ -1,14 +1,15 @@
 <html>
 	
-<head>  
-	        
-        <script>
-        WebAudioControlsOptions={
-        useMidi:1,
-        midilearn:1}   
-        </script>
+<head>
+  <script>
+WebAudioControlsOptions={
+  useMidi:1,
+  midilearn:1}   
+</script>
+  
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/plugin/wavesurfer.spectrogram.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/plugin/wavesurfer.timeline.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/plugin/wavesurfer.regions.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -18,6 +19,7 @@
 	</head>
 <body>
 	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 <div class="synth">
 
@@ -49,7 +51,7 @@
      <label class="label">SMOOTHER</label>
   </div>
 <div id="fader">
-      <input class="zoom"id="zoomslider" type="range" min="1" max="1000" value="2" style="width: 100%"/>
+      <input class="zoom"id="zoomslider" type="range" min="1" max="300" value="2" style="width: 100%"/>
   <br></br>
  <input class="general_slider"id="fadein" type="range" min="1" max="750" value="0"/>
 </div>
@@ -78,11 +80,20 @@
   </div>
   
 <div id="cut">
-  <webaudio-knob class ="filter_knob" id ="frequencySlider" src="https://g200kg.github.io/webaudio-controls/knobs/Carbon.png" sprites="100" value="1000" diameter="45" step = "1"
+ 
+<webaudio-knob class ="filter_knob" id ="frequencySlider" src="https://g200kg.github.io/webaudio-controls/knobs/Carbon.png" sprites="100" value="1000" diameter="45" step = "1"
               min="0" max ="2500" style="height: 80px;">
     <div id=label_filt>C</div>
-</webaudio-knob> 
+</webaudio-knob>
+</div>
+  
+<div id = "filter_rolldown">
+  <div id=label_rld1>-24dB</div> <webaudio-switch id = "rolloff_toggle" src="https://g200kg.github.io/webaudio-controls/knobs/switch_toggle.png" width="35" height="35"></webaudio-switch><div id=label_rld2>-12dB</div>
   </div>
+ 
+
+
+  
 
 <div id="gain">
 <webaudio-knob class ="filter_knob" id ="gainSlider" src="https://g200kg.github.io/webaudio-controls/knobs/Carbon.png" sprites="100" value="20" diameter="45"
@@ -119,7 +130,7 @@
    <span class=index>R</span> 
  </div>
 </div>
-
+<div id = "padbuilder">
 <div class="modes">
   <webaudio-knob id="mode_input" type = "range" src="https://g200kg.github.io/webaudio-controls/img/hsw5.png" sprites="4" value="0" min="0" max="4" width="148" height="42" midilearn="1" midicc="1.1"> 
   </webaudio-knob>
@@ -137,6 +148,7 @@
 
 <div id="cadence">
  <input type="range" min="0" max="3" setp = "1" value="0" class="slider" id="cadence_input">  
+</div>
 </div>
 
   <div class="keyb">  
