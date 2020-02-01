@@ -62,7 +62,6 @@ c.onchange = function(event) {
     }
    }  
 }
-var urls = ["https://github.com/David-Badiane/stufff/blob/master/impulse2.mp3"]
 
 ////////FILE READER 
 const i = document.querySelector("#myfile");
