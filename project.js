@@ -118,8 +118,8 @@ wavesurfer.on('ready', function() {
 
 //sliders
 const zoom_slider = document.querySelector('#zoomslider');
-zoom_slider.onchange = function () {
-  var zoomLevel = Number(slider.value);
+zoom_slider.oninput = function () {
+  var zoomLevel = zoom_slider.value;
   wavesurfer.zoom(zoomLevel);
 };
 const smoother = document.querySelector("#fadein")
