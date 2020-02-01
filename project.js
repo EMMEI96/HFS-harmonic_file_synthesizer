@@ -33,6 +33,13 @@ gain: 1,
 rolloff: -24
 })
 
+const rolloff_switch = document.getElementById("rolloff_toggle")
+rolloff_switch.onchange = function (){
+   var select = rolloff_switch.value
+  if (!select){ Filter.rolloff = -24}
+  if(select){Filter.rolloff=-12}
+}
+
 
 var wavesurfer = WaveSurfer.create({
         container: '#waveformi',
