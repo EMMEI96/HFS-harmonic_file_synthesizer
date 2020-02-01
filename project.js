@@ -450,7 +450,7 @@ var env = {
 
 
 const impulses = ["FileConv","autoconv","impulse1","impulse2","impulse3","impulse4"];
-const impulses_ref =[myArrayBuffer2,smallBuffer,"./impulses/impulse1.mp3","./impulses/impulse.mp3","./impulses/impulse3amp.mp3","./impulses/impulse4.mp3"];
+const impulses_ref =[myArrayBuffer2,smallBuffer,"./impulses/impulse1.mp3","./impulses/impulse2.mp3","./impulses/impulse3amp.mp3","./impulses/impulse4.mp3"];
 
  var impulsesDropdown = document.getElementById("impulsesDropdown"); 
 
