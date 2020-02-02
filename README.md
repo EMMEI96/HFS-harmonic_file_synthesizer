@@ -6,7 +6,7 @@
 
 ## 1.Introduction
 
-The Harmonic File Synthesizer is an app that brings the user nearer to harmony and sound visualizing while displaying many classic characteristics of a synth. 
+The Harmonic File Synthesizer is an app created by David Giuseppe Badiane and Miriam Papagno that brings the user nearer to harmony and sound visualizing while displaying many classic characteristics of a synth. 
 
 It's divided in three main modules: the waveform-visualizer; the sound synthesis controls and the padbuilder interface with the user.
 The application runs best on Chrome browser because of the use of [Tone.js](https://tonejs.github.io/docs/13.8.25/Tone) and [WebAudio API](https://www.w3.org/TR/webaudio/). 
