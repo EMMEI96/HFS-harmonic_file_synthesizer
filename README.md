@@ -20,9 +20,9 @@ When using the app with a midi keyboard:
 if some keys keep on being active, just mouse click on some keys of the virtual keyboard. Be sure to refresh the page after connecting the MIDI device.
 
 When using the app with computer keyboard and mouse:
-cliking outside the virtual keyboard disactivates computer keyboard, so we advice to keep one single note playing and use knobs and filters to create a sequence of chords for your voice.
+clicking outside the virtual keyboard disactivates computer keyboard, so we advice to keep one single note playing (keeping the pc keyboard down) and use knobs and filters to create a sequence of chords for your voice (if the touch pad is disabled while pressing a key its better to use a mouse).
 
-Chord-modes-filters knobs support midilearn, we advice to set midilearn on the knobs before starting to play.
+Chord-modes-filters knobs support MIDILearn, we advice to set MIDILearn on the knobs before starting to play.
 
 ## 2.WaveSurfer
 
