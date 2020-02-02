@@ -74,7 +74,7 @@ When the slider is at zero (down) the signal is 100%dry and 0%wet, when the slid
 
 
 ### 3.2.Filter
-<p align ="center" ><img width ="250" height ="257" src = "readme_images/filters.png"></p>
+<p align ="center" ><img width ="250" height ="255" src = "readme_images/filters.png"></p>
 
 The filter section is divided in two major components : 
 **the filter type dropdown**
@@ -87,6 +87,10 @@ Three knobs controlling **Cut,Gain,Q** and a switch for the slope of the filter 
 
 <p align ="center" ><img width ="200" height ="190" src = "readme_images/midilearn.png"></p>
 
+### 3.3.ADSR
+
+The envelope of the played sound is controlled by a Tone.envelope; it's applied each time a key of the keyboard interface is pressed (see chapter 4). The user can set attack, decay, sustain and release values using the **four relative faders ADSR**. 
+The set envelope is visualized in a canvas.  
 
 
 
