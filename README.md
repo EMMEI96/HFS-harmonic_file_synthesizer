@@ -26,7 +26,7 @@ Chord-modes-filters knobs support midilearn, we advice to set midilearn on the k
 
 ## WaveSurfer
 
-<img width ="850" height ="150" src = "readme_images/interface.png">
+<img width ="850" height ="150" src = "readme_images/waveform.png">
 
 The first step is to load an mp3 file on the wavesurfer and choose the sample that is going to be played in the pad builder section.
 
