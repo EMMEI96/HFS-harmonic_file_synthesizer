@@ -34,11 +34,11 @@ The user finds four blue buttons:
 - **play/pause**: start/stop the listening of what's inside the wavesurfer;
 - **main waveform**: returns to the original uploaded audio sample waveform  it's mostly used when the region is unsatisfaying and the user needs to go back to choose a new region;
 - **cut waveform** : show the chosen region waveform;
-- **reverse** : active only after one region has been shown (cut-waveform), it reverses the smallBuffer (region buffer) inside the wavesurfer
+- **reverse** : active only after one region has been shown (cut-waveform), it reverses the smallBuffer (region buffer) inside the wavesurfer.
 
 The user finds two sliders:
 
-- **zoom** : used to raise or diminish zoom in order to choose a region
+- **zoom** : used to raise or diminish zoom in order to choose a region;
 - **smoother** : used to prevent the click that could come from the sample cut of the user. We recommend to use low values of smoothing for a more continuous sound. The smoothing works with an exponential function that softens both edges.
 
 
@@ -61,14 +61,14 @@ From now on the signal has been chosen and we start the signal-processing part o
 
 
 The convolution section is divided in two major components : 
-**the convolution type dropdown**
+#### the convolution type dropdown
 The chosen signal (put into a small Buffer) is sent to a Tone.Convolver where it is convolved with an audio signal (impulse). 
 There is a **dropdown-select** that defines the impulse provenance: FileConv for external file impulse, autoconv for autoconvolution and impulse 1--4 for preset impulses;
 
-**the file input for user defined impulses**
+#### the file input for user defined impulses
 The user defines the file that he wants to use for convolution by clicking on the **impulse file input**, right down the dropdown select;
 
-**the dry/wet slider**
+#### the dry/wet slider
 The control of the gain of the processed signal is done by the **dry/wet slider**, (dry = unprocessed signal || wet = processed signal).
 When the slider is at zero (down) the signal is 100%dry and 0%wet, when the slider is at its maximum value (up) the signal is 0%dry and 100%wet;
 
