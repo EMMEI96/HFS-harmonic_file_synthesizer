@@ -119,11 +119,14 @@ The **Chords** knob has five values [0,1,2,3,4], when its to 0 there is no chord
 <p align ="center" > G key played </p>
 
 The **Variations** slider has four values [0,1,2,3], its preset value is 0 and each time it is released it returns to 0. When its value goes from 1 to 3 it forms three different chords using as tonic a different pitch from the played one.
-<p align ="center" ><img width ="600" height ="115" src = "readme_images/padbuildercadence.png"></p>
+<p align ="center" ><img width ="600" height ="110" src = "readme_images/padbuildercadence.png"></p>
 <p align ="center" > G key played </p>
 Each chord can be directly visualised on the keyboard, allowing people to learn chords and modes directly playing into the app.
 
 
 ### 4.3.Master Volume
 
+The last but not least component is the **Master Volume slider**, which sets the Master volume in dB. It's very useful to set the right volume to prevent clicking and disturbed signals when their amplitude is too high. It is also useful to make the sound hearable (for example applying a bandpass -24dB filter cuts the amplitude of the processed sound).
+
+We advise so wisely use the Master Slider while playing and processing the signal.
 
