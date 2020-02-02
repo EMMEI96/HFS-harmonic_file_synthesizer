@@ -17,7 +17,7 @@ It's better to use the application along with a midi controller, since the keybo
 The pad builder interface can also be used with the computer keyboard and the pc mouse.
 
 When using the app with a midi keyboard:
-if some keys keep on being active, just mouse click on some keys of the virtual keyboard.
+if some keys keep on being active, just mouse click on some keys of the virtual keyboard. Be sure to refresh the page after connecting the MIDI device.
 
 When using the app with computer keyboard and mouse:
 cliking outside the virtual keyboard disactivates computer keyboard, so we advice to keep one single note playing and use knobs and filters to create a sequence of chords for your voice.
@@ -83,7 +83,7 @@ After being convolved, the signal is sent to a Tone.Filter that changes its spec
 [ lowpass (gain disabled), highpass (gain disabled), bandpass (gain disabled), highshelf (q disabled), allpass (gain disabled), peaking (uses all) ]
 
 **the filter controllers**
-Three knobs controlling **Cut,Gain,Q** and a switch for the slope of the filter **-12dB/-24dB**; the Cut, Gain and Q knobs can be connected via **MIDILEARN by right-clicking on them , pressing learn and moving a knob on the midi device**.
+Three webAudioComponents knobs controlling **Cut,Gain,Q** and a switch for the slope of the filter **-12dB/-24dB**; the Cut, Gain and Q knobs can be connected via **MIDI Learn by right-clicking on them , pressing learn and moving a knob on the midi device**.
 
 <p align ="center" ><img width ="200" height ="190" src = "readme_images/midilearn.png"></p>
 
@@ -92,6 +92,35 @@ Three knobs controlling **Cut,Gain,Q** and a switch for the slope of the filter 
 The envelope of the played sound is controlled by a Tone.envelope; it's applied each time a key of the keyboard interface is pressed (see chapter 4). The user can set attack, decay, sustain and release values using the **four relative faders ADSR**. 
 The set envelope is visualized in a canvas.  
 
+##4.PadBuilder
+This is the part relative to the playing of the sound (user interface) and the harmonization of the signal.
 
+###4.1.Keyboard Interface
+**webAudioComponents keyboard**
+It can be played in three ways:
+1) using a **MIDI device**
+2) using the **pc keyboard** --->the subsequence of semitones follows the keyboard letters from the "Z" to the "P" and then from "1" to "0"
+3) clicking on the keyboard.
+
+Since the mouse should be busy changing the controls the best way to play is the first.
+The keyboard allows multi-touch, but is a **mono keyboard** (only one note at a time will be playing even if pressing more notes). When clicking on the keyboard it's better to not slide between keys.
+
+###4.2.Harmonizer : Modes , Chords, Variations
+
+The HFS is provided with an innovative set of harmonizing techniques based on the most ancient five modes (greek modes + locrian). When a key is pressed we can harmonize it by changing the value of the Pad Builder controls.
+
+**Pad Builder Controls**
+The **Modes** are selected by a webaudio knob , each Mode has a set of 4 **Chords** controlled by another webaudio-knob (all webaudio-knobs allow **MIDI Learn**) and a set of 3 **Variations** controlled by a slider.
+
+Modes : phrygian -- mixolydian -- dorian -- lydian -- locrian
+
+The **Chords** knob has five values [0,1,2,3,4], when its to 0 there is no chord set, when the value goes from 1 to 4 it forms four different chords using the pitch of the played note as tonic.
+
+The **Variations** slider has four values [0,1,2,3], its preset value is 0 and each time it is released it returns to 0. When its value goes from 1 to 3 it forms three different chords using as tonic a different pitch from the played one.
+
+Each chord can be directly visualised on the keyboard, allowing people to learn chords and modes directly playing into the app.
+
+
+###4.3.Master Volume
 
 
