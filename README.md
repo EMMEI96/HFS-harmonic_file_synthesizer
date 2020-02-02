@@ -77,12 +77,12 @@ When the slider is at zero (down) the signal is 100%dry and 0%wet, when the slid
 <p align ="center" ><img width ="250" height ="255" src = "readme_images/filters.png"></p>
 
 The filter section is divided in two major components : 
-**the filter type dropdown**
+#### the filter type dropdown
 After being convolved, the signal is sent to a Tone.Filter that changes its spectral content. There is a **dropdown-select** that defines the type of the filter, each type involves a certain number of control knobs;
 
 [ lowpass (gain disabled), highpass (gain disabled), bandpass (gain disabled), highshelf (q disabled), allpass (gain disabled), peaking (uses all) ]
 
-**the filter controllers**
+#### the filter controllers
 Three webAudioComponents knobs controlling **Cut,Gain,Q** and a switch for the slope of the filter **-12dB/-24dB**; the Cut, Gain and Q knobs can be connected via **MIDI Learn by right-clicking on them , pressing learn and moving a knob on the midi device**.
 
 <p align ="center" ><img width ="200" height ="190" src = "readme_images/midilearn.png"></p>
@@ -96,7 +96,7 @@ The set envelope is visualized in a canvas.
 This is the part relative to the playing of the sound (user interface) and the harmonization of the signal.
 
 ### 4.1.Keyboard Interface
-**webAudioComponents keyboard**
+#### webAudioComponents keyboard
 It can be played in three ways:
 1) using a **MIDI device**
 2) using the **pc keyboard** --->the subsequence of semitones follows the keyboard letters from the "Z" to the "P" and then from "1" to "0"
@@ -109,8 +109,8 @@ The keyboard allows multi-touch, but is a **mono keyboard** (only one note at a 
 
 The HFS is provided with an innovative set of harmonizing techniques based on the most ancient five modes (greek modes + locrian). When a key is pressed we can harmonize it by changing the value of the Pad Builder controls.
 
-**Pad Builder Controls**
-The **Modes** are selected by a webaudio knob , each Mode has a set of 4 **Chords** controlled by another webaudio-knob (all webaudio-knobs allow **MIDI Learn**) and a set of 3 **Variations** controlled by a slider.
+#### Pad Builder Controls
+The **Modes** are selected by a webaudio knob , each Mode has a set of 4 **Chords** controlled by another webaudio-knob (all webaudio-knobs allow **MIDILearn**) and a set of 3 **Variations** controlled by a slider.
 
 Modes : phrygian -- mixolydian -- dorian -- lydian -- locrian
 
