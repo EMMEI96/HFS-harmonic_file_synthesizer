@@ -115,10 +115,10 @@ The **Modes** are selected by a webaudio knob , each Mode has a set of 4 **Chord
 Modes : phrygian -- mixolydian -- dorian -- lydian -- locrian
 
 The **Chords** knob has five values [0,1,2,3,4], when its to 0 there is no chord set, when the value goes from 1 to 4 it forms four different chords using the pitch of the played note as tonic.
-<p align ="center" ><img width ="700" height ="200" src = "readme_images/padbuilder.png"></p> G key played
+<p align ="center" ><img width ="600" height ="130" src = "readme_images/padbuilder.png"></p> G key played
 
 The **Variations** slider has four values [0,1,2,3], its preset value is 0 and each time it is released it returns to 0. When its value goes from 1 to 3 it forms three different chords using as tonic a different pitch from the played one.
-<p align ="center" ><img width ="700" height ="200" src = "readme_images/padbuilder.png"></p> G key played
+<p align ="center" ><img width ="600" height ="150" src = "readme_images/padbuilder.png"> G key played </p>
 
 Each chord can be directly visualised on the keyboard, allowing people to learn chords and modes directly playing into the app.
 
