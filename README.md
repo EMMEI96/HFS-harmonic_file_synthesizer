@@ -42,13 +42,13 @@ The user finds two sliders:
 
 sample before smoothing:
 
-<img width ="700" height ="150" src = "readme_images/samplebeforesmooth.png">
+<img width ="750" height ="150" src = "readme_images/samplebeforesmooth.png">
 
 
 sample after smoothing: 
-<br>
-<img width ="700" height ="150" src = "readme_images/sampleaftersmooth.png">
-</br>
+
+<img width ="750" height ="150" src = "readme_images/sampleaftersmooth.png">
+
 
 
 
