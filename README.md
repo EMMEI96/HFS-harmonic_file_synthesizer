@@ -92,10 +92,10 @@ Three webAudioComponents knobs controlling **Cut,Gain,Q** and a switch for the s
 The envelope of the played sound is controlled by a Tone.envelope; it's applied each time a key of the keyboard interface is pressed (see chapter 4). The user can set attack, decay, sustain and release values using the **four relative faders ADSR**. 
 The set envelope is visualized in a canvas.  
 
-##4.PadBuilder
+## 4.PadBuilder
 This is the part relative to the playing of the sound (user interface) and the harmonization of the signal.
 
-###4.1.Keyboard Interface
+### 4.1.Keyboard Interface
 **webAudioComponents keyboard**
 It can be played in three ways:
 1) using a **MIDI device**
@@ -105,7 +105,7 @@ It can be played in three ways:
 Since the mouse should be busy changing the controls the best way to play is the first.
 The keyboard allows multi-touch, but is a **mono keyboard** (only one note at a time will be playing even if pressing more notes). When clicking on the keyboard it's better to not slide between keys.
 
-###4.2.Harmonizer : Modes , Chords, Variations
+### 4.2.Harmonizer : Modes , Chords, Variations
 
 The HFS is provided with an innovative set of harmonizing techniques based on the most ancient five modes (greek modes + locrian). When a key is pressed we can harmonize it by changing the value of the Pad Builder controls.
 
@@ -115,12 +115,14 @@ The **Modes** are selected by a webaudio knob , each Mode has a set of 4 **Chord
 Modes : phrygian -- mixolydian -- dorian -- lydian -- locrian
 
 The **Chords** knob has five values [0,1,2,3,4], when its to 0 there is no chord set, when the value goes from 1 to 4 it forms four different chords using the pitch of the played note as tonic.
+<p align ="center" ><img width ="700" height ="200" src = "readme_images/padbuilder.png"></p> G key played
 
 The **Variations** slider has four values [0,1,2,3], its preset value is 0 and each time it is released it returns to 0. When its value goes from 1 to 3 it forms three different chords using as tonic a different pitch from the played one.
+<p align ="center" ><img width ="700" height ="200" src = "readme_images/padbuilder.png"></p> G key played
 
 Each chord can be directly visualised on the keyboard, allowing people to learn chords and modes directly playing into the app.
 
 
-###4.3.Master Volume
+### 4.3.Master Volume
 
 
