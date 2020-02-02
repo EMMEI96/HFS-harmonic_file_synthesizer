@@ -4,14 +4,14 @@
 
 [Here](https://www.mediafire.com/file/v2jati117jpb6pt/sounds.rar/file) we uploaded a pack of mp3 sounds, you can use them as main brick. 
 
-## Introduction
+## 1.Introduction
 
 The Harmonic File Synthesizer is an app that brings the user nearer to harmony and sound visualizing while displaying many classic characteristics of a synth. 
 
 It's divided in three main modules: the waveform-visualizer; the sound synthesis controls and the padbuilder interface with the user.
 The application runs best on Chrome browser because of the use of Tone.js and WebAudio API. 
 
-### Tips and issues
+### 1.1.Tips and issues
 
 It's better to use the application along with a midi controller, since the keyboard component has to be clicked to be enabled.
 The pad builder interface can also be used with the computer keyboard and the pc mouse.
@@ -24,7 +24,7 @@ cliking outside the virtual keyboard disactivates computer keyboard, so we advic
 
 Chord-modes-filters knobs support midilearn, we advice to set midilearn on the knobs before starting to play.
 
-## WaveSurfer
+## 2.WaveSurfer
 
 <p align ="center" > <img width ="850" height ="150" src = "readme_images/waveform.png"> </p>
 
@@ -51,11 +51,11 @@ Sample after smoothing:
 
 <img width ="750" height ="150" src = "readme_images/sampleaftersmooth.png">
 
-##Controls
+## 3.Controls
 
 From now on the signal has been chosen and we start the signal-processing part of the app. 
 
-###Convolver
+### 3.1.Convolver
 
 <p align ="center" ><img width ="250" height ="300" src = "readme_images/convolution.png"></p>
 
