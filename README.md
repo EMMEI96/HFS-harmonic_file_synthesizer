@@ -9,7 +9,7 @@
 The Harmonic File Synthesizer is an app that brings the user nearer to harmony and sound visualizing while displaying many classic characteristics of a synth. 
 
 It's divided in three main modules: the waveform-visualizer; the sound synthesis controls and the padbuilder interface with the user.
-The application runs best on Chrome browser because of the use of Tone.js and WebAudio API. 
+The application runs best on Chrome browser because of the use of [Tone.js](https://tonejs.github.io/docs/13.8.25/Tone) and [WebAudio API](https://www.w3.org/TR/webaudio/). 
 
 ### 1.1.Tips and issues
 
@@ -22,13 +22,13 @@ if some keys keep on being active, just mouse click on some keys of the virtual 
 When using the app with computer keyboard and mouse:
 clicking outside the virtual keyboard disactivates computer keyboard, so we advice to keep one single note playing (keeping the pc keyboard down) and use knobs and filters to create a sequence of chords for your voice (if the touch pad is disabled while pressing a key its better to use a mouse).
 
-Chord-modes-filters knobs support MIDILearn, we advice to set MIDILearn on the knobs before starting to play.
+Chord-modes-filters knobs support MIDI Learn, we advice to set MIDI Learn on the knobs before starting to play.
 
 ## 2.WaveSurfer
 
 <p align ="center" > <img width ="850" height ="150" src = "readme_images/waveform.png"> </p>
 
-The first step is to load an mp3 file on the wavesurfer and choose the sample that is going to be played in the pad builder section.
+The first step is to load an mp3 file on the [wavesurfer.js](https://wavesurfer-js.org/) visualizer and choose the sample that is going to be played in the pad builder section.
 
 The user finds four blue buttons:
 - **play/pause**: start/stop the listening of what's inside the wavesurfer;
@@ -83,7 +83,8 @@ After being convolved, the signal is sent to a Tone.Filter that changes its spec
 [ lowpass (gain disabled), highpass (gain disabled), bandpass (gain disabled), highshelf (q disabled), allpass (gain disabled), peaking (uses all) ]
 
 #### the filter controllers
-Three webAudioComponents knobs controlling **Cut,Gain,Q** and a switch for the slope of the filter **-12dB/-24dB**; the Cut, Gain and Q knobs can be connected via **MIDI Learn by right-clicking on them , pressing learn and moving a knob on the midi device**.
+Three webAudioComponents knobs controlling **Cut, Gain, Q** and a switch for the slope of the filter **-12dB/-24dB**.
+The Cut, Gain and Q knobs can be connected via **MIDI Learn by right-clicking on them , pressing learn and moving a knob on the midi device**.
 
 <p align ="center" ><img width ="200" height ="190" src = "readme_images/midilearn.png"></p>
 
@@ -110,11 +111,12 @@ The keyboard allows multi-touch, but is a **mono keyboard** (only one note at a 
 The HFS is provided with an innovative set of harmonizing techniques based on the most ancient five modes (greek modes + locrian). When a key is pressed we can harmonize it by changing the value of the Pad Builder controls.
 
 #### Pad Builder Controls
-The **Modes** are selected by a webaudio knob , each Mode has a set of 4 **Chords** controlled by another webaudio-knob (all webaudio-knobs allow **MIDILearn**) and a set of 3 **Variations** controlled by a slider.
+The **Modes** are selected by a webaudio knob , each Mode has a set of 4 **Chords** controlled by another webaudio-knob (all webaudio-knobs allow **MIDI Learn**) and a set of 3 **Variations** controlled by a slider.
 
 Modes : phrygian -- mixolydian -- dorian -- lydian -- locrian
 
-The **Chords** knob has five values [0,1,2,3,4], when its to 0 there is no chord set, when the value goes from 1 to 4 it forms four different chords using the pitch of the played note as tonic.
+The **Chords** knob has five values [0,1,2,3,4], when its to 0 there is no chord set, when the value goes from 1 to 4 it forms four different chords using the pitch of the played note as tonic. Setting Chords knob to a value and changing Mode knob will result into interesting successions of chords.
+
 <p align ="center" ><img width ="600" height ="110" src = "readme_images/padbuilder.png"></p> 
 <p align ="center" > G key played </p>
 
@@ -128,5 +130,5 @@ Each chord can be directly visualised on the keyboard, allowing people to learn 
 
 The last but not least component is the **Master Volume slider**, which sets the Master volume in dB. It's very useful to set the right volume to prevent clicking and disturbed signals when their amplitude is too high. It is also useful to make the sound hearable (for example applying a bandpass -24dB filter cuts the amplitude of the processed sound).
 
-We advise so wisely use the Master Slider while playing and processing the signal.
+We advise to wisely use the Master Slider while playing and processing the signal.
 
