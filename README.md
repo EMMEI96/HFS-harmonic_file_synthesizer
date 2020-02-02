@@ -57,7 +57,7 @@ From now on the signal has been chosen and we start the signal-processing part o
 
 ### 3.1.Convolver
 
-<p align ="center" ><img width ="250" height ="300" src = "readme_images/convolution.png"></p>
+<p align ="center" ><img width ="250" height ="280" src = "readme_images/convolution.png"></p>
 
 The chosen signal (put into a small Buffer) is sent to a Tone.Convolver where it is convolved with an audio signal (impulse). 
 There is a **dropdown select** that defines the impulse provenance: FileConv for external file impulse, autoconv for autoconvolution and impulse 1--4 for preset impulses.
