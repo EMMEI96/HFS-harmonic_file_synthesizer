@@ -24,6 +24,8 @@ clicking outside the virtual keyboard disactivates computer keyboard, so we advi
 
 Chord-modes-filters knobs support MIDI Learn, we advice to set MIDI Learn on the knobs before starting to play.
 
+As for filters, peaking filter with boosted gain allows to underline certain harmonics of the chord or sound, creating a psychedelic effect. We recommend to wisely use the Master Volume Slider based on the type of filter applied and convolution dry/wet slider value.
+
 ## 2.WaveSurfer
 
 <p align ="center" > <img width ="850" height ="150" src = "readme_images/waveform.png"> </p>
