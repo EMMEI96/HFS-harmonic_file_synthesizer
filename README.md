@@ -31,23 +31,23 @@ Chord-modes-filters knobs support midilearn, we advice to set midilearn on the k
 The first step is to load an mp3 file on the wavesurfer and choose the sample that is going to be played in the pad builder section.
 
 The user finds four blue buttons:
-- play/pause: start/stop the listening of what's inside the wavesurfer;
-- main waveform: returns to the original uploaded audio sample waveform  it's mostly used when the region is unsatisfaying and the user needs to go back to choose a new region;
-- cut waveform : show the chosen region waveform;
-- reverse : active only after one region has been shown (cut-waveform), it reverses the smallBuffer (region buffer) inside the wavesurfer
+- **play/pause**: start/stop the listening of what's inside the wavesurfer;
+- **main waveform**: returns to the original uploaded audio sample waveform  it's mostly used when the region is unsatisfaying and the user needs to go back to choose a new region;
+- **cut waveform** : show the chosen region waveform;
+- **reverse** : active only after one region has been shown (cut-waveform), it reverses the smallBuffer (region buffer) inside the wavesurfer
 
 The user finds two sliders:
 
-- zoom : used to raise or diminish zoom in order to choose a region
-- smoother : used to prevent the click that could come from the sample cut of the user. We recommend to use low values of smoothing for a more continuous sound. The smoothing works with an exponential function that softens both edges.
+- **zoom** : used to raise or diminish zoom in order to choose a region
+- **smoother** : used to prevent the click that could come from the sample cut of the user. We recommend to use low values of smoothing for a more continuous sound. The smoothing works with an exponential function that softens both edges.
 
 
-sample before smoothing:
+Sample before smoothing:
 
 <img width ="750" height ="150" src = "readme_images/samplebeforesmooth.png">
 
 
-sample after smoothing: 
+Sample after smoothing: 
 
 <img width ="750" height ="150" src = "readme_images/sampleaftersmooth.png">
 
