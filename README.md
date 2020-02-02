@@ -57,15 +57,37 @@ From now on the signal has been chosen and we start the signal-processing part o
 
 ### 3.1.Convolver
 
-<p align ="center" ><img width ="250" height ="280" src = "readme_images/convolution.png"></p>
+<p align ="center" ><img width ="250" height ="270" src = "readme_images/convolution.png"></p>
 
+
+The convolution section is divided in two major components : 
+**the convolution type dropdown**
 The chosen signal (put into a small Buffer) is sent to a Tone.Convolver where it is convolved with an audio signal (impulse). 
-There is a **dropdown select** that defines the impulse provenance: FileConv for external file impulse, autoconv for autoconvolution and impulse 1--4 for preset impulses.
+There is a **dropdown-select** that defines the impulse provenance: FileConv for external file impulse, autoconv for autoconvolution and impulse 1--4 for preset impulses.
 
+**the file input for user defined impulses**
 The user defines the file that he wants to use for convolution by clicking on the **impulse file input**, right down the dropdown select.
 
+**the dry/wet slider**
 The control of the gain of the processed signal is done by the **dry/wet slider**, (dry = unprocessed signal || wet = processed signal).
 When the slider is at zero (down) the signal is 100%dry and 0%wet, when the slider is at its maximum value (up) the signal is 0%dry and 100%wet.
 
+
+### 3.2.Filter
+
+The filter section is divided in two major components : 
+**the filter type dropdown**
+After being convolved, the signal is sent to a Tone.Filter that changes its spectral content. There is a **dropdown-select** that defines the type of the filter, each type involves a certain number of control knobs
+
+[lowpass (gain disabled),
+highpass (gain disabled),
+bandpass (gain disabled),
+highshelf (q disabled),
+allpass (gain disabled),
+peaking (uses all)]
+
+**the filter controllers**
+Three knobs and a switch
+**Cut** 
 
 
