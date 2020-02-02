@@ -57,7 +57,7 @@ From now on the signal has been chosen and we start the signal-processing part o
 
 ### 3.1.Convolver
 
-<p align ="center" ><img width ="250" height ="260" src = "readme_images/convolution.png"></p>
+<p align ="center" ><img width ="250" height ="257" src = "readme_images/convolution.png"></p>
 
 
 The convolution section is divided in two major components : 
@@ -74,7 +74,7 @@ When the slider is at zero (down) the signal is 100%dry and 0%wet, when the slid
 
 
 ### 3.2.Filter
-<p align ="center" ><img width ="250" height ="260" src = "readme_images/filters.png"></p>
+<p align ="center" ><img width ="250" height ="257" src = "readme_images/filters.png"></p>
 
 The filter section is divided in two major components : 
 **the filter type dropdown**
