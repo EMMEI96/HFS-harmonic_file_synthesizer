@@ -6,7 +6,7 @@
 
 ## 1.Introduction
 
-The Harmonic File Synthesizer is an app created by David Giuseppe Badiane and Miriam Papagno that brings the user nearer to harmony and sound visualizing while displaying many classic characteristics of a synth. 
+The Harmonic File Synthesizer is an app created by David Giuseppe Badiane and Miriam Papagno that brings the user nearer to modal harmony and sound visualizing while displaying many classic characteristics of a synth.
 
 It's divided in three main modules: the waveform-visualizer; the sound synthesis controls and the padbuilder interface with the user.
 The application runs best on Chrome browser because of the use of [Tone.js](https://tonejs.github.io/docs/13.8.25/Tone) and [WebAudio API](https://www.w3.org/TR/webaudio/). 
@@ -110,7 +110,7 @@ The keyboard allows multi-touch, but is a **mono keyboard** (only one note at a 
 
 ### 4.2.Harmonizer : Modes , Chords, Variations
 
-The HFS is provided with an innovative set of harmonizing techniques based on the most ancient five modes (greek modes + locrian). When a key is pressed we can harmonize it by changing the value of the Pad Builder controls.
+The HFS is provided with an innovative set of harmonizing techniques based on the most ancient five greek modes. When a key is pressed we can harmonize it by changing the value of the Pad Builder controls.
 
 #### Pad Builder Controls
 The **Modes** are selected by a webaudio knob , each Mode has a set of 4 **Chords** controlled by another webaudio-knob (all webaudio-knobs allow **MIDI Learn**) and a set of 3 **Variations** controlled by a slider.
