@@ -20,9 +20,9 @@ When using the app with a midi keyboard:
 if some keys keep on being active, just mouse click on some keys of the virtual keyboard. Be sure to refresh the page after connecting the MIDI device.
 
 When using the app with computer keyboard and mouse:
-clicking outside the virtual keyboard disactivates computer keyboard, so we advice to keep one single note playing (keeping the pc keyboard down) and use knobs and filters to create a sequence of chords for your voice (if the touch pad is disabled while pressing a key its better to use a mouse).
+clicking outside the virtual keyboard deactivates computer keyboard, so we advice to keep one single note playing (keeping the pc keyboard key down) while using knobs and filters to create a sequence of chords and effects for your voice; since the touch pad is often disabled while pressing a key it's better to use a mouse, which also allows more fluent control of knobs with the mouse roll.
 
-Chord-modes-filters knobs support MIDI Learn, we advice to set MIDI Learn on the knobs before starting to play.
+All webAudio knobs (Chord-modes-filters) support MIDI Learn, we advice to control the setting MIDI Learn on the knobs of the MIDI device before starting to play. All webAudio knobs react to both mouse-move and mouse-roll allowing more fluent control.
 
 As for filters, peaking filter with boosted gain allows to underline certain harmonics of the chord or sound, creating a psychedelic effect. We recommend to wisely use the Master Volume Slider based on the type of filter applied and convolution dry/wet slider value.
 
