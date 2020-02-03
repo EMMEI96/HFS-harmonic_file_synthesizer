@@ -13,16 +13,16 @@ The application runs best on Chrome browser because of the use of [Tone.js](http
 
 ### 1.1.Tips and issues
 
-It's better to use the application along with a midi controller, since the keyboard component has to be clicked to be enabled.
+It's better to use the application along with a midi controller, since clicking outside the keyboard component disables it.
 The pad builder interface can also be used with the computer keyboard and the pc mouse.
 
 When using the app with a midi keyboard:
 if some keys keep on being active, just mouse click on some keys of the virtual keyboard. Be sure to refresh the page after connecting the MIDI device.
 
 When using the app with computer keyboard and mouse:
-clicking outside the virtual keyboard deactivates computer keyboard, so we advice to keep one single note playing (keeping the pc keyboard key down) while using knobs and filters to create a sequence of chords and effects for your voice; since the touch pad is often disabled while pressing a key it's better to use a mouse, which also allows more fluent control of knobs with the mouse roll.
+clicking outside the virtual keyboard deactivates computer keyboard, so we advice to **use the mouse roll** to control knobs and filters knobs (the keyboard won't be disabled) and to create a sequence of chords and effects for your sample. Since the touch pad is often disabled while pressing a key on a portable computer, it's better to use a mouse .
 
-All webAudio knobs (Chord-modes-filters) support MIDI Learn, we advice to control the setting MIDI Learn on the knobs of the MIDI device before starting to play. All webAudio knobs react to both mouse-move and mouse-roll allowing more fluent control.
+All webAudio knobs (Chord-modes-filter_controls) support MIDI Learn, we advice to control the setting MIDI Learn on the knobs of the MIDI device before starting to play. All webAudio knobs react to both mouse-move and mouse-roll. mouse-roll allows a more fluent control and doesn't disable the interface keyboard.
 
 As for filters, peaking filter with boosted gain allows to underline certain harmonics of the chord or sound, creating a psychedelic effect. We recommend to wisely use the Master Volume Slider based on the type of filter applied and convolution dry/wet slider value.
 
