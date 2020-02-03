@@ -448,7 +448,7 @@ keyboard.keycodes2 = [];
 $(document).keyup(function(e) { 
 if (keyboard.keycodes1.indexOf(e.keyCode) >= 0){
     kcode_position = keyboard.keycodes1.indexOf(e.keyCode);
-    knote_position = 36+position;
+    knote_position = 36+kcode_position;
     keyboard.setNote(0,knote_position + (dati[Mode.value][cadence.value][chord.value]["player1"])/100);
     keyboard.setNote(0,knote_position + (dati[Mode.value][cadence.value][chord.value]["player2"])/100);
     keyboard.setNote(0,knote_position + (dati[Mode.value][cadence.value][chord.value]["player3"])/100);
