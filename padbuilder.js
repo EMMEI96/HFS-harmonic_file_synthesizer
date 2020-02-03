@@ -1,5 +1,3 @@
-
-
 var envelope;
 var convolver;
 var players=[];
@@ -14,52 +12,63 @@ var current;
 var attacking = false;
 var osc;
 var modes = ["PHRYGIAN","MIXOLYDIAN","DORIAN","LYDIAN","LOCRIAN"]
-
 var controller = false;
 var notes =[];
 var str = ""
-
+var myArrayBuffer2;
+var convolver;
+var reader2= new FileReader();
 var env = {
   attack: 1.0,
   decay: 1.0,
   sustain: 0.5,
   release: 1.5
 };
-var myArrayBuffer2;
-var convolver;
-var reader2= new FileReader();
 
+//Convolver
 const impulses = ["FileConv","autoconv","impulse1","impulse2","impulse3","impulse4"];
 const impulses_ref =[myArrayBuffer2,smallBuffer,"./impulses/impulse1.mp3","./impulses/impulse2.mp3","./impulses/impulse3amp.mp3","./impulses/impulse4.mp3"];
+WebAudioControlsOptions={useMidi:1};
 
- var impulsesDropdown = document.getElementById("impulsesDropdown"); 
+const impulse_file = document.querySelector("#forCon");
+impulse_file.onchange = function(event) {
+   var fileList = impulse_file.files;
+   var file;
+   for (let i = 0; i < fileList.length; i++) {
+     // get item
+    file = fileList.item(i);
+    reader2.readAsArrayBuffer(file)
+    reader2.onload = function(evt) {
+      audioData = evt.target.result;
+      audioCtx.decodeAudioData(audioData, function(buf) {
+        myArrayBuffer2 = buf;
+      })
+    }
+   }  
+}
 
-  for(var item in impulses) {
+const impulsesDropdown = document.getElementById("impulsesDropdown");
+var impulse_selector=0 ;
+for(var item in impulses) {
     var option = document.createElement("option");
     option.innerHTML = impulses[item];
     // This will cause a re-flow of the page but we don't care
     impulsesDropdown.appendChild(option);
   };
-
-
-
-var impulse_selector=0 ;
 function impulseClicked (event) {
     event = event || window.event;
     var target = event.target || event.srcElement;
-    impulse_selector = impulses.indexOf(target.value);
-    
+    impulse_selector = impulses.indexOf(target.value); 
   };
 impulsesDropdown.addEventListener("change", impulseClicked, false);
-const drywet = document.getElementById("drywet");
 
+const drywet = document.getElementById("drywet");
 drywet.oninput = function()
 {
   convolver.wet.value = drywet.value / 100;
-  
 }
 
-
+//ADSR
 
 function drawAxis() {
   ctx.save();
@@ -325,9 +334,11 @@ envelope = new Tone.AmplitudeEnvelope({
   }).toMaster()
 }
 
+createEnvelope(); //creates preset envelope
+
 //////////////////////////////////////////////////////////
  
-  
+//functions for the interface  
 
 
 function createPlayers(){
@@ -342,8 +353,7 @@ function createPlayers(){
   player3 = new Tone.GrainPlayer(smallBuffer);
   players.push(player1);
   players.push(player2);
-  players.push(player3);
-  
+  players.push(player3); 
   for(let i=0; i<players.length; i++){
    players[i].grainSize = 0.15;
    players[i].playbackRate = 1;
@@ -351,14 +361,12 @@ function createPlayers(){
    players[i].loop = true;
    players[i].connect(convolver);
   }
-  
   convolver.connect(Filter);
-  
   Filter.getFrequencyResponse();
-   Filter.connect(envelope);  
-    player1.start();
-    player2.start();
-    player3.start(); 
+  Filter.connect(envelope);  
+  player1.start();
+  player2.start();
+  player3.start(); 
 }
 
 function stop_players(){
@@ -366,39 +374,6 @@ function stop_players(){
    players[i].stop() 
   }
 }
-document.querySelector("#monitor").innerText = "PHRYGIAN"
-const Mode = document.querySelector("#mode_input")
-Mode.addEventListener('input',actions);
-Mode.addEventListener('change',actions);
-
-function mode_input(){
-  document.querySelector("#monitor").innerText = modes[Mode.value]
-  set_chords();
-}
-
-//cadence input setting
-
-const cadence=document.querySelector("#cadence_input");
-
-cadence.oninput=function(){
-  
-  if(buffer){
-  set_chords();
-  }
-
- }
-cadence.onchange=function(){
-  cadence.value=0;
-  set_chords();
-}
-
-const chord=document.querySelector("#chord_input");
-const knob = document.getElementsByTagName('webaudio-knob')
-for ( let i = 0; i<knob.length; i++){
- knob[i].addEventListener('input',actions,false);
- knob[i].addEventListener('change',actions,false);
-}
-
 
 function set_chords(){
   player1.detune = pitch + dati[Mode.value][cadence.value][chord.value]["player1"]
@@ -415,7 +390,7 @@ function set_chords(){
    keyboard.setNote(1,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
    keyboard.setNote(1,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
    }
- }
+  }
   
   if (chord.value==0) {
     player2.mute = true;
@@ -429,7 +404,38 @@ function set_chords(){
 
 
 
+//modes input setting
+document.querySelector("#monitor").innerText = "PHRYGIAN"
+const Mode = document.querySelector("#mode_input")
+Mode.addEventListener('input',actions);
+Mode.addEventListener('change',actions);
+function mode_input(){
+  document.querySelector("#monitor").innerText = modes[Mode.value]
+  set_chords();
+}
 
+//chord input setting
+const chord=document.querySelector("#chord_input");
+const knob = document.getElementsByTagName('webaudio-knob')
+for ( let i = 0; i<knob.length; i++){
+ knob[i].addEventListener('input',actions,false);
+ knob[i].addEventListener('change',actions,false);
+}
+
+//variations input setting
+const cadence=document.querySelector("#cadence_input");
+
+cadence.oninput=function(){
+  if(buffer){
+  set_chords();
+  }
+ }
+cadence.onchange=function(){
+  cadence.value=0;
+  set_chords();
+}
+
+//keyboard settings
 var keyboard=document.getElementById("keyboard");
 keyboard.addEventListener('change',actions,false);
 keyboard.addEventListener('note',actions,false);
@@ -437,34 +443,33 @@ keyboard.addEventListener('note',actions,false);
 keyboard.keycodes1 = [90,88,67,86,66,78,77,65,83,68,70,71,72,74,75,76,81,87,69,82,84,89,85,73,79,80,49,50,51,52,53,54,55,56,57,48];
 keyboard.keycodes2 = [];
 
-
-createEnvelope() ;
 //using computer keyboard leads to some problems of the library. if setNote is used you need to reclick on the piano keyboard
+//therefore we lose information about when the key goes up so we manually fix it
 $(document).keyup(function(e) { 
 if (keyboard.keycodes1.indexOf(e.keyCode) >= 0){
-  
-    position = keyboard.keycodes1.indexOf(e.keyCode);
-    keyboard.setNote(0,36+position + (dati[Mode.value][cadence.value][chord.value]["player1"])/100);
-    keyboard.setNote(0,36+position + (dati[Mode.value][cadence.value][chord.value]["player2"])/100);
-    keyboard.setNote(0,36+position + (dati[Mode.value][cadence.value][chord.value]["player3"])/100);
+    kcode_position = keyboard.keycodes1.indexOf(e.keyCode);
+    knote_position = 36+position;
+    keyboard.setNote(0,knote_position + (dati[Mode.value][cadence.value][chord.value]["player1"])/100);
+    keyboard.setNote(0,knote_position + (dati[Mode.value][cadence.value][chord.value]["player2"])/100);
+    keyboard.setNote(0,knote_position + (dati[Mode.value][cadence.value][chord.value]["player3"])/100);
     envelope.triggerRelease();
     controller = false;
     playing = false;
  }
 })
 
-
-
+//this is the function called for the events of webAudio components
+//polling
 
 function actions(e){
- if(buffer) {
-  if(e.target.id=="mode_input") {
+ //active only if the file is there
+  if(buffer) {
+  if(e.target.id == "mode_input") {
     mode_input()
   }
 
   if(e.target.id=="keyboard") {
    str=e.type + " : " + e.target.id + " : [" + e.note + "] ";
-   
    if(e.note[0]==1){
     playing=true;
     keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
@@ -478,7 +483,6 @@ function actions(e){
      }
     }
     pitch = 100*(e.note[1]-55);
-   
     createPlayers();
     envelope.triggerAttack();
     set_chords();
@@ -502,14 +506,12 @@ function actions(e){
  }
 }
 
+//control of the webAudio keyboard with the midi device
 webAudioControlsMidiManager.addMidiListener(function(e) {
- 
- if(smallBuffer){
-   
+ if(smallBuffer){ 
   if(e.data[0]==144){
     playing = true;
-    
-   if(controller){
+    if(controller){
     if(notes[notes.length-1] != notes[notes.length-2]){
      envelope.triggerRelease();
      stop_players();
