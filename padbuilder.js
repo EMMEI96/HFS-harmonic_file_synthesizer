@@ -28,7 +28,7 @@ var env = {
 //Convolver
 const impulses = ["FileConv","autoconv","impulse1","impulse2","impulse3","impulse4"];
 const impulses_ref =[myArrayBuffer2,smallBuffer,"./impulses/impulse1.mp3","./impulses/impulse2.mp3","./impulses/impulse3amp.mp3","./impulses/impulse4.mp3"];
-WebAudioControlsOptions={useMidi:1};
+WebAudioControlsOptions={useMidi:1, midilearn:1};
 
 const impulse_file = document.querySelector("#forCon");
 impulse_file.onchange = function(event) {
