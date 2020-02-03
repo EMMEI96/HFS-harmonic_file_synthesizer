@@ -65,7 +65,7 @@ From now on the signal has been chosen and we start the signal-processing part o
 The convolution section is divided in two major components : 
 #### the convolution type dropdown
 The chosen signal (put into a small Buffer) is sent to a Tone.Convolver where it is convolved with an audio signal (impulse). 
-There is a **dropdown-select** that defines the impulse provenance: FileConv for external file impulse, autoconv for autoconvolution and impulse 1--4 for preset impulses. When changing the type of convolution, for hearing the new type convolver in effect one has to click a new key.
+There is a **dropdown-select** that defines the impulse provenance: FileConv for external file impulse, autoconv for autoconvolution and impulse 1--4 for preset impulses. When changing the type of convolution, for hearing the new type convolver in effect one has to press a new key.
 
 #### the file input for user defined impulses
 The user defines the file that he wants to use for convolution by clicking on the **impulse file input**, right down the dropdown select;
