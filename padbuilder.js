@@ -26,8 +26,8 @@ var env = {
 };
 
 //Convolver
-const impulses = ["FileConv","autoconv","impulse1","impulse2","impulse3","impulse4"];
-const impulses_ref =[myArrayBuffer2,smallBuffer,"./impulses/impulse1.mp3","./impulses/impulse2.mp3","./impulses/impulse3amp.mp3","./impulses/impulse4.mp3"];
+const impulses = ["autoconv","FileConv","impulse1","impulse2","impulse3","impulse4"];
+const impulses_ref =[smallBuffer, myArrayBuffer2,"./impulses/impulse1.mp3","./impulses/impulse2.mp3","./impulses/impulse3amp.mp3","./impulses/impulse4.mp3"];
 
 const impulse_file = document.querySelector("#forCon");
 impulse_file.onchange = function(event) {
@@ -342,8 +342,8 @@ createEnvelope(); //creates preset envelope
 
 function createPlayers(){
   stop_players();
-  impulses_ref[0] = myArrayBuffer2;
-  impulses_ref[1] = smallBuffer;
+  impulses_ref[0] = smallBuffer;
+  impulses_ref[1] = myArrayBuffer2;
   convolver = new Tone.Convolver(impulses_ref[impulse_selector]);
   convolver.wet.value = drywet.value / 100;
   players=[];
