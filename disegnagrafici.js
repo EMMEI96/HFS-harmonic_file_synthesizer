@@ -98,9 +98,6 @@ smoother.oninput = function() {
     smoothing(smallBuffer);
   } 
 }
-smoother.onchange = function() {
-  wavesurfer.playPause()
-}
 
 //buttons
 start.onclick = function() {
@@ -117,15 +114,13 @@ save.onclick = function() {
   savereg("sample");
   clone(smallBuffer);
   redraw(smallBuffer);
-  
   if(reversed){
   reverse(smallBuffer)
   loadBuffer(smallBuffer)
   }
-  
-
   wavesurfer.playPause();
 }
+
 waveforming.onclick = function (){
   y_old = [];
   smoother.value=0;
