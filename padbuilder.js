@@ -28,7 +28,6 @@ var env = {
 //Convolver
 const impulses = ["FileConv","autoconv","impulse1","impulse2","impulse3","impulse4"];
 const impulses_ref =[myArrayBuffer2,smallBuffer,"./impulses/impulse1.mp3","./impulses/impulse2.mp3","./impulses/impulse3amp.mp3","./impulses/impulse4.mp3"];
-WebAudioControlsOptions={useMidi:1, midilearn:1};
 
 const impulse_file = document.querySelector("#forCon");
 impulse_file.onchange = function(event) {
@@ -462,30 +461,37 @@ if (keyboard.keycodes1.indexOf(e.keyCode) >= 0){
 //polling
 
 function actions(e){
- //active only if the file is there
-  if(buffer) {
-  if(e.target.id == "mode_input") {
+ if(buffer) {
+  if(e.target.id=="mode_input") {
     mode_input()
   }
 
   if(e.target.id=="keyboard") {
    str=e.type + " : " + e.target.id + " : [" + e.note + "] ";
+   
    if(e.note[0]==1){
+
     playing=true;
+
     keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
     keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
     keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
-    keyboard.click()
-    if(controller){
-     if(notes[notes.length-1] != notes[notes.length-2]){
-      envelope.triggerRelease()
-      stop_players();
-     }
-    }
+
     pitch = 100*(e.note[1]-55);
     createPlayers();
     envelope.triggerAttack();
     set_chords();
+    //set_chords plays some games with setNote to allow vision of changing chords
+    //I manually fix it
+    if(controller){
+      keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
+      keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
+      keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
+      
+      keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
+      keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
+      keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
+    }
     notes.push(e.note[1])
     controller = true
    }
@@ -496,47 +502,59 @@ function actions(e){
     keyboard.setNote(0,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
     keyboard.setNote(0,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
     envelope.triggerRelease();
+    
     playing=false;
     controller = false  
   }          
  }
 
  else
- set_chords();           
+ {
+ set_chords();
+ } 
+          
  }
 }
 
-//control of the webAudio keyboard with the midi device
 webAudioControlsMidiManager.addMidiListener(function(e) {
- if(smallBuffer){ 
+ 
+ if(smallBuffer){
+   
   if(e.data[0]==144){
     playing = true;
-    if(controller){
-    if(notes[notes.length-1] != notes[notes.length-2]){
-     envelope.triggerRelease();
-     stop_players();
-    }
-   }
    keyboard.setNote(1,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
    keyboard.setNote(1,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
    keyboard.setNote(1,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
+  
+   
    pitch = 100*(e.data[1]-55);
    createPlayers();
    set_chords();
    envelope.triggerAttack();
+   //set_chords plays some games with setNote to allow vision of changing chords
+   //I manually fix it
+   if(controller){
+    keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
+    keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
+    keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
+
+    keyboard.setNote(1,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
+    keyboard.setNote(1,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
+    keyboard.setNote(1,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
+  }
    notes.push(e.data[1]);
    controller = true;
   }
   
   if(e.data[0] == 128) {
+    notes=[];
     keyboard.setNote(0,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
     keyboard.setNote(0,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
     keyboard.setNote(0,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
     playing=false;
-    notes=[];
-    keyboard.setNote(0,e.data[1]);
     controller = false;
     envelope.triggerRelease();
   }
  }  
 });
+
