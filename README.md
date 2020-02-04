@@ -114,7 +114,7 @@ It can be played in three ways:
 3) clicking on the keyboard.
 
 Since the mouse should be busy changing the controls the best way to play is the first.
-The keyboard allows multi-touch, but is a **mono keyboard** (only one note at a time will be playing even if pressing more notes). When clicking on the keyboard it's better to not slide between keys.
+The keyboard allows multi-touch, but is a **mono keyboard** (only one note at a time will be playing even if pressing more notes). When clicking on the keyboard it's better to not slide between keys, unless the sound becomes grainy and it's necessary to wait a little bit for it to fix itslef.
 
 ### 4.2.Harmonizer : Modes , Chords, Variations
 
