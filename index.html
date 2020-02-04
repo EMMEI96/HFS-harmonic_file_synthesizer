@@ -59,7 +59,7 @@
     
     <label class="label" id= "dry">DRY</label>
     <div id="fader_dw">
-    <input type="range" class="general_slider" id = "drywet" value="50" step="1" min="0" max="100" oninput="" style = "width : 100%"></input>
+    <input type="range" class="general_slider" id = "drywet" value="0" step="1" min="0" max="100" oninput="" style = "width : 100%"></input>
     </div>
      <label class="label" id= "wet">WET</label>
     
@@ -82,7 +82,7 @@
     <div id="cut">
      
   <webaudio-knob class ="filter_knob" id ="frequencySlider" src="https://g200kg.github.io/webaudio-controls/knobs/Carbon.png" sprites="100" value="1000" diameter="45" step = "1"
-                  min="0" max ="2500" step = "10" style="height: 80px;" midilearn = "1" midicc = "1.3">
+                  min="0" max ="2500" step = "25" style="height: 80px;" midilearn = "1" midicc = "1.3" tooltip ="%4.0f">
         <div id=label_filt>C</div>
     </webaudio-knob>
     </div>
