@@ -23,7 +23,7 @@ if some keys keep on being active, just mouse click on some keys of the virtual 
 When using the app with computer keyboard and mouse:
 clicking outside the virtual keyboard deactivates computer keyboard, so we advice to **use the mouse roll** to control knobs and filters knobs (the keyboard won't be disabled) and to create a sequence of chords and effects for your sample. Since the touch pad is often disabled while pressing a key on a portable computer, it's better to use a mouse .
 
-All webAudio knobs (Chord-modes-filter_controls) support MIDI Learn, we advice to control the setting MIDI Learn on the knobs of the MIDI device before starting to play. All webAudio knobs react to both mouse-move and mouse-roll. mouse-roll allows a more fluent control and doesn't disable the interface keyboard.
+All webAudio knobs (Chord-modes-filter_controls) support MIDI Learn, we advice to control the setting MIDI Learn on the knobs of the MIDI device before starting to play. All webAudio knobs react to both mouse-move and mouse-roll. 
 
 As for filters, peaking filter with boosted gain allows to underline certain harmonics of the chord or sound, creating a psychedelic effect. We recommend to wisely use the Master Volume Slider based on the type of filter applied and convolution dry/wet slider value.
 
@@ -32,7 +32,7 @@ When the distortion is too much, waiting a little bit without playing makes it r
 
 Using the convolution with a file and wisely playing with the dry/wet allows to create pads with a constant note or different sound features.
 
-When using filter knobs with midilearn while playing, the changement of values has to be slow, unless the software won't follow up fluidly.
+**When using filter knobs with midilearn while playing, the changement of values has to be slow, unless the software won't follow up fluidly.**
 
 ## 2.WaveSurfer
 
