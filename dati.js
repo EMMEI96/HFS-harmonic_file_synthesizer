@@ -128,7 +128,7 @@ const dati = {0://phrygian
      {0: 
      {0:{player1:0, player2:0,player3:0},
       1:{player1:0,player2:300,player3:1000},
-      2:{player1:0,player2:600,player3:900},
+      2:{player1:0,player2:300,player3:600},
       3:{player1:0,player2:500,player3:800},
       4:{player1:0,player2:600,player3:1000} 
      },
@@ -155,7 +155,8 @@ const dati = {0://phrygian
        4:{player1:-100, player2:200, player3:500}
      }
     }
-}
+} 
+
 const filters = { "lowpass": {
     q: true,
     gain: false
