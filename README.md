@@ -26,6 +26,11 @@ All webAudio knobs (Chord-modes-filter_controls) support MIDI Learn, we advice t
 
 As for filters, peaking filter with boosted gain allows to underline certain harmonics of the chord or sound, creating a psychedelic effect. We recommend to wisely use the Master Volume Slider based on the type of filter applied and convolution dry/wet slider value.
 
+The autoconvolution sounds like a resonating box: the main harmonics of the file resonate with itself when played creating psychedelic distortion effects. Since the not detuned sample is played on G, the keys of G,C,D of every octave resonate. 
+When the distortion is too much, waiting a little bit without playing makes it return to the normal effect.
+
+Using the convolution with a file and wisely playing with the dry/wet allows to create pads with a constant note or different sound features.
+
 ## 2.WaveSurfer
 
 <p align ="center" > <img width ="850" height ="150" src = "readme_images/waveform.png"> </p>
