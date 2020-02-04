@@ -142,4 +142,4 @@ The last but not least component is the **Master Volume slider**, which sets the
 
 We advise to wisely use the Master Slider while playing and processing the signal.
 
-### [VIDEO DEMONSTRATION](https://www.dropbox.com/s/cqnn071eom35z6m/HFS-Harmonic%20File%20Synthesizer.mp4?dl=0)
+#### [VIDEO DEMONSTRATION](https://www.dropbox.com/s/cqnn071eom35z6m/HFS-Harmonic%20File%20Synthesizer.mp4?dl=0)
