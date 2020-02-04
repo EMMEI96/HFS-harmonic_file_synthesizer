@@ -31,6 +31,8 @@ When the distortion is too much, waiting a little bit without playing makes it r
 
 Using the convolution with a file and wisely playing with the dry/wet allows to create pads with a constant note or different sound features.
 
+When using filter knobs with midilearn, the changement of values has to be slow, unless the software won't follow up fluidly.
+
 ## 2.WaveSurfer
 
 <p align ="center" > <img width ="850" height ="150" src = "readme_images/waveform.png"> </p>
