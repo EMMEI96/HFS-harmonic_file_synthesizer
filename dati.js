@@ -95,32 +95,32 @@ const dati = {0://phrygian
 3://lydian
      {0: 
      {0:{player1:0, player2:0,player3:0},
-      1:{player1:0,player2:400,player3:700},
-      2:{player1:0,player2:600,player3:900},
-      3:{player1:0,player2:700,player3:1100},
-      4:{player1:0,player2:200,player3:900} 
+      1:{player1:0, player2:400, player3:700},
+      2:{player1:0, player2:600, player3:900},
+      3:{player1:0, player2:700, player3:1100},
+      4:{player1:0, player2:200, player3:900} 
      },
         
       1:{
-       0:{player1:-100,player2:300,player:900},
-       1:{player1:-100,player2:300,player:900},
-       2:{player1:-100,player2:300,player:900},
-       3:{player1:-100,player2:300,player:900},
-       4:{player1:-100,player2:300,player:900}
+       0:{player1:-100,player2:300,player3:900},
+       1:{player1:-100,player2:300,player3:900},
+       2:{player1:-100,player2:300,player3:900},
+       3:{player1:-100,player2:300,player3:900},
+       4:{player1:-100,player2:300,player3:900}
        },
      2:{
-       0:{player1:200, player2:600, player:900},
-       1:{player1:200, player2:600, player:900},
-       2:{player1:200, player2:600, player:900},
-       3:{player1:200, player2:600, player:900},
-       4:{player1:200, player2:600, player:900}
+       0:{player1:200, player2:600, player3:900},
+       1:{player1:200, player2:600, player3:900},
+       2:{player1:200, player2:600, player3:900},
+       3:{player1:200, player2:600, player3:900},
+       4:{player1:200, player2:600, player3:900}
         },
      3:{
-       0:{player1:0, player2:200, player:500},
-       1:{player1:0, player2:200, player:500},
-       2:{player1:0, player2:200, player:500},
-       3:{player1:0, player2:200, player:500},
-       4:{player1:0, player2:200, player:500}
+       0:{player1:0, player2:200, player3:500},
+       1:{player1:0, player2:200, player3:500},
+       2:{player1:0, player2:200, player3:500},
+       3:{player1:0, player2:200, player3:500},
+       4:{player1:0, player2:200, player3:500}
        }
     },
       
