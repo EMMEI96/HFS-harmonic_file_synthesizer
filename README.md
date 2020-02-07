@@ -4,7 +4,7 @@
 
 [Here](https://www.mediafire.com/file/rljgcxawquo8wuj/suoni_effettivi.zip/file) we uploaded a pack of mp3 sounds, you can use them as main brick. 
 [Here](https://www.mediafire.com/file/pewajzxk76w728z/impulses.zip/file) we uploaded a pack of mp3 impulses for the convolver.
-
+[APP LINK](https://emmei96.github.io/HFS-harmonic_file_synthesizer/)
 ## 1.Introduction
 
 The Harmonic File Synthesizer is an app created by David Giuseppe Badiane and Miriam Papagno that brings the user nearer to modal harmony and sound visualizing while displaying many classic characteristics of a synth.
@@ -28,9 +28,9 @@ All webAudio knobs (Chord-modes-filter_controls) support MIDI Learn, we advice t
 As for filters, peaking filter with boosted gain allows to underline certain harmonics of the chord or sound, creating a psychedelic effect. We recommend to wisely use the Master Volume Slider based on the type of filter applied and convolution dry/wet slider value.
 
 The autoconvolution sounds like a resonating box: the main harmonics of the file resonate with itself when played creating psychedelic distortion effects. Since the not detuned sample is played on G, the keys of G,C,D of every octave resonate. 
-When the distortion is too much, waiting a little bit without playing makes it return to the normal effect.
+When the distortion is too much, waiting a little bit without playing makes it return back to normal .
 
-Using the convolution with a file and wisely playing with the dry/wet allows to create pads with a constant note or different sound features.
+Using the convolution with a file and wisely playing with the dry/wet allows to create pads with a constant note, different sound features and resonances.
 
 **When using filter knobs with midilearn while playing, the changement of values has to be slow, unless the software won't follow up fluidly.**
 
@@ -74,6 +74,7 @@ The convolution section is divided in two major components :
 #### the convolution type dropdown
 The chosen signal (put into a small Buffer) is sent to a Tone.Convolver where it is convolved with an audio signal (impulse). 
 There is a **dropdown-select** that defines the impulse provenance: FileConv for external file impulse, autoconv for autoconvolution and impulse 1--4 for preset impulses. When changing the type of convolution, for hearing the new type convolver in effect one has to press a new key.
+
 
 #### the file input for user defined impulses
 The user defines the file that he wants to use for convolution by clicking on the **impulse file input**, right down the dropdown select;
