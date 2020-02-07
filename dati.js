@@ -116,11 +116,11 @@ const dati = {0://phrygian
        4:{player1:200, player2:600, player3:900}
         },
      3:{
-       0:{player1:0, player2:200, player3:500},
-       1:{player1:0, player2:200, player3:500},
-       2:{player1:0, player2:200, player3:500},
-       3:{player1:0, player2:200, player3:500},
-       4:{player1:0, player2:200, player3:500}
+       0:{player1:100, player2:800, player3:1400},
+       1:{player1:100, player2:800, player3:1400},
+       2:{player1:100, player2:800, player3:1400},
+       3:{player1:100, player2:800, player3:1400},
+       4:{player1:100, player2:800, player3:1400}
        }
     },
       
