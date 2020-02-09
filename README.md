@@ -54,7 +54,7 @@ Using the __convolution with a file__ and wisely playing with the dry/wet allows
 The first step is to load an mp3 file on the [wavesurfer.js](https://wavesurfer-js.org/) visualizer and choose the sample that is going to be played in the pad builder section.
 
 The user finds four blue buttons:
-- **play/pause**: start/stop the listening of what's inside the wavesurfer;
+- **play/pause**: start/stop the listening of what's inside the wavesurfer; enabled by clicking the button or the space bar;
 - **main waveform**: returns to the original uploaded audio sample waveform  it's mostly used when the region is unsatisfaying and the user needs to go back to choose a new region;
 - **cut waveform** : show the chosen region waveform;
 - **reverse** : active only after one region has been shown (cut-waveform), it reverses the smallBuffer (region buffer) inside the wavesurfer.
