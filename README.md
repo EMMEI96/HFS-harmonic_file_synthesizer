@@ -5,7 +5,7 @@
 
 <div align="center">
    <a href="https://www.youtube.com/embed/RJ15d6W5Er4" target="_blank"><img src="http://img.youtube.com/vi/RJ15d6W5Er4/0.jpg" 
-                                                                            alt="HFS" width="240" height="180" border="10" ></img>
+                                                                            alt="youtube video" width="240" height="180" border="10" ></img>
    </a>
 </div>
 
