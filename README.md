@@ -3,7 +3,7 @@
 <p align ="center" > <img width ="450" height ="300" src = "readme_images/logo.jpg"> </p>
 
 
-<div align="center">
+<div align="center">youtube video
    <a href="https://www.youtube.com/embed/RJ15d6W5Er4" target="_blank"><img src="http://img.youtube.com/vi/RJ15d6W5Er4/0.jpg" 
                                                                             alt="youtube video" width="240" height="180" border="10" ></img>
    </a>
