@@ -2,10 +2,10 @@
 
 <p align ="center" > <img width ="450" height ="300" src = "readme_images/logo.jpg"> </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RJ15d6W5Er4?start=2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <div align="center">
     <iframe width="620" height="315"
-        src="https://www.youtube.com/embed/RJ15d6W5Er4?start=2">
+        src="https://www.youtube.com/embed/RJ15d6W5Er4?start=2"  >
     </iframe>
 </div>
 [Here](https://www.mediafire.com/file/rljgcxawquo8wuj/suoni_effettivi.zip/file) we uploaded a pack of mp3 sounds, you can use them as main brick. 
