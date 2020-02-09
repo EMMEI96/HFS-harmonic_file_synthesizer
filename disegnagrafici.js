@@ -103,6 +103,12 @@ smoother.oninput = function() {
 start.onclick = function() {
   wavesurfer.playPause();
 }
+$(document).keydown(function(e) { 
+    if (e.keyCode == 32){
+        wavesurfer.playPause();
+     }
+    })
+
 reversing.onclick = function(){
  if(!firstclone){
    riversati();
@@ -139,6 +145,8 @@ waveforming.onclick = function (){
 }
 
 ///////FUNCTIONS
+
+
 
 //loadBuffer loads the target buffer into wavesurfer
 function loadBuffer(obj){
