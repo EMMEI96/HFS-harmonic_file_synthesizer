@@ -33,7 +33,7 @@ __When using the app with a midi keyboard__:
 if some keys keep on being active, just mouse click on some keys of the virtual keyboard. Be sure to refresh the page after connecting the MIDI device.
 
 __When using the app with computer keyboard and mouse__:
-clicking outside the virtual keyboard deactivates computer keyboard, so we advice to **use the mouse roll** to control knobs and filters knobs (the keyboard won't be disabled) and to create a sequence of chords and effects for your sample. Since the touch pad is often disabled while pressing a key on a portable computer, it's better to use a mouse .
+clicking outside the virtual keyboard deactivates computer keyboard, so we advice to *use the mouse roll to control knobs and filters knobs* (the keyboard won't be disabled) and to create a sequence of chords and effects for your sample. Since the touch pad is often disabled while pressing a key on a portable computer, it's better to use a mouse .
 
 __All webAudio knobs__ (Chord-modes-filter_controls) __support MIDI Learn__, we advice to control the setting MIDI Learn on the knobs of the MIDI device before starting to play. __All webAudio knobs react to both mouse-move and mouse-roll__. 
 
