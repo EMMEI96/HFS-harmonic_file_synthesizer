@@ -15,6 +15,8 @@
                                                                             alt="youtube video" width="240" height="180" border="10" ></img>
    </a>
 </div>
+
+
 ## 1.Introduction
 
 The Harmonic File Synthesizer is an app created by David Giuseppe Badiane and Miriam Papagno that brings the user nearer to modal harmony and sound visualizing while displaying many classic characteristics of a synth.
@@ -153,4 +155,3 @@ The last but not least component is the **Master Volume slider**, which sets the
 
 We advise to wisely use the Master Slider while playing and processing the signal.
 
-#### [VIDEO DEMONSTRATION](https://www.dropbox.com/s/7aahq3jxkyhxcwc/HFS-Harmonic%20File%20Synthesizer.mp4?dl=0)
