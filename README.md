@@ -29,20 +29,21 @@ The application runs best on Chrome browser because of the use of [Tone.js](http
 It's better to use the application along with a midi controller, since clicking outside the keyboard component disables it.
 The pad builder interface can also be used with the computer keyboard and the pc mouse.
 
-When using the app with a midi keyboard:
+__When using the app with a midi keyboard__:
 if some keys keep on being active, just mouse click on some keys of the virtual keyboard. Be sure to refresh the page after connecting the MIDI device.
 
-When using the app with computer keyboard and mouse:
+__When using the app with computer keyboard and mouse__:
 clicking outside the virtual keyboard deactivates computer keyboard, so we advice to **use the mouse roll** to control knobs and filters knobs (the keyboard won't be disabled) and to create a sequence of chords and effects for your sample. Since the touch pad is often disabled while pressing a key on a portable computer, it's better to use a mouse .
 
-All webAudio knobs (Chord-modes-filter_controls) support MIDI Learn, we advice to control the setting MIDI Learn on the knobs of the MIDI device before starting to play. All webAudio knobs react to both mouse-move and mouse-roll. 
+__All webAudio knobs__ (Chord-modes-filter_controls) __support MIDI Learn__, we advice to control the setting MIDI Learn on the knobs of the MIDI device before starting to play. __All webAudio knobs react to both mouse-move and mouse-roll__. 
 
 As for filters, peaking filter with boosted gain allows to underline certain harmonics of the chord or sound, creating a psychedelic effect. We recommend to wisely use the Master Volume Slider based on the type of filter applied and convolution dry/wet slider value.
 
-The autoconvolution sounds like a resonating box: the main harmonics of the file resonate with itself when played creating psychedelic distortion effects. Since the not detuned sample is played on G, the keys of G,C,D of every octave resonate. 
+__The autoconvolution sounds like a resonating box__: the main harmonics of the file resonate with itself when played creating psychedelic distortion effects. Since the not detuned sample is played on G, the keys of G,C,D of every octave resonate. We recommend to avoid chords when autoconvolvution wet value is more than 0.4.
+
 When the distortion is too much, waiting a little bit without playing makes it return back to normal .
 
-Using the convolution with a file and wisely playing with the dry/wet allows to create pads with a constant note, different sound features and resonances.
+Using the __convolution with a file__ and wisely playing with the dry/wet allows to create pads with a constant note, different sound features and resonances.
 
 **When using filter knobs with midilearn while playing, the changement of values has to be slow, unless the software won't follow up fluidly.**
 
