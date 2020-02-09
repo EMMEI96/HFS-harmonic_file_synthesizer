@@ -3,17 +3,18 @@
 <p align ="center" > <img width ="450" height ="300" src = "readme_images/logo.jpg"> </p>
 
 
-<div align="center">youtube video
-   <a href="https://www.youtube.com/embed/RJ15d6W5Er4" target="_blank"><img src="http://img.youtube.com/vi/RJ15d6W5Er4/0.jpg" 
-                                                                            alt="youtube video" width="240" height="180" border="10" ></img>
-   </a>
-</div>
-
 [Here](https://www.mediafire.com/file/rljgcxawquo8wuj/suoni_effettivi.zip/file) we uploaded a pack of mp3 sounds, you can use them as main brick.
 
 [Here](https://www.mediafire.com/file/pewajzxk76w728z/impulses.zip/file) we uploaded a pack of mp3 impulses for the convolver.
 
 [APP LINK](https://emmei96.github.io/HFS-harmonic_file_synthesizer/)
+
+<p align ="center" > youtube demonstrative video </p>
+<div align="center">
+   <a href="https://www.youtube.com/embed/RJ15d6W5Er4" target="_blank"><img src="http://img.youtube.com/vi/RJ15d6W5Er4/0.jpg" 
+                                                                            alt="youtube video" width="240" height="180" border="10" ></img>
+   </a>
+</div>
 ## 1.Introduction
 
 The Harmonic File Synthesizer is an app created by David Giuseppe Badiane and Miriam Papagno that brings the user nearer to modal harmony and sound visualizing while displaying many classic characteristics of a synth.
