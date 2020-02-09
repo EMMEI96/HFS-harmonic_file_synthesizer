@@ -26,7 +26,7 @@ The application runs best on Chrome browser because of the use of [Tone.js](http
 
 ### 1.1.Tips and issues
 
-It's better to use the application along with a midi controller, since clicking outside the keyboard component disables it.
+__It's better to use the application along with a midi controller__, since clicking outside the keyboard component disables it.
 The pad builder interface can also be used with the computer keyboard and the pc mouse.
 
 __When using the app with a midi keyboard__:
@@ -37,7 +37,7 @@ clicking outside the virtual keyboard deactivates computer keyboard, so we advic
 
 __All webAudio knobs__ (Chord-modes-filter_controls) __support MIDI Learn__, we advice to control the setting MIDI Learn on the knobs of the MIDI device before starting to play. __All webAudio knobs react to both mouse-move and mouse-roll__. 
 
-As for filters, peaking filter with boosted gain allows to underline certain harmonics of the chord or sound, creating a psychedelic effect. We recommend to wisely use the Master Volume Slider based on the type of filter applied and convolution dry/wet slider value.
+As for filters, __peaking filter with boosted gain allows to underline certain harmonics__ of the chord or sound, creating a psychedelic effect. We recommend to wisely use the Master Volume Slider based on the type of filter applied and convolution dry/wet slider value.
 
 __The autoconvolution sounds like a resonating box__: the main harmonics of the file resonate with itself when played creating psychedelic distortion effects. Since the not detuned sample is played on G, the keys of G,C,D of every octave resonate. We recommend to avoid chords when autoconvolvution wet value is more than 0.4.
 
