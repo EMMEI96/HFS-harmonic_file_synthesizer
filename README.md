@@ -47,7 +47,9 @@ Using the __convolution with a file__ and wisely playing with the dry/wet allows
 
 **When using filter knobs with midilearn while playing, the changement of values has to be slow, unless the software won't follow up fluidly.**
 
-**Try not varying the envelope while playing**, the app has a protection for it, but it's better to not stress it too much
+**Try not varying the envelope while playing**, the app has a protection for it, but it's better to not stress it too much.
+
+**Play one key after the other**, the piano keyboard stops itself if a key is moved up while another is pressed, so keep the sequence clean: there is the release of the envelope that links the notes for you anyways.
 
 ## 2.WaveSurfer
 
