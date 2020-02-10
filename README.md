@@ -47,6 +47,8 @@ Using the __convolution with a file__ and wisely playing with the dry/wet allows
 
 **When using filter knobs with midilearn while playing, the changement of values has to be slow, unless the software won't follow up fluidly.**
 
+**Try not varying the envelope while playing**, the app has a protection for it, but it's better to not stress it too much
+
 ## 2.WaveSurfer
 
 <p align ="center" > <img width ="850" height ="150" src = "readme_images/waveform.png"> </p>
