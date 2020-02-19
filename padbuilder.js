@@ -373,6 +373,7 @@ function stop_players(){
    players[i].stop() 
   }
 }
+var chords_span = document.getElementById("chord_type");
 
 function set_chords(){
   player1.detune = pitch + dati[Mode.value][cadence.value][chord.value]["player1"]
