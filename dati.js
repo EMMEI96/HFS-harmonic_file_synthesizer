@@ -177,3 +177,164 @@ const filters = { "lowpass": {
     gain: true
   }
 };
+
+const chords_explained = 
+{0://phrygian
+  {0: 
+   {0:{write:"minor mode"},
+       1:{write:"I-"},
+       2:{write:"I-2b"},
+       3:{write:"IV-  2nd inversion"},
+       4:{write:"I-7"} 
+   },
+         
+   1:  {0:{write:"(IIb)delta"},
+        1:{write:"(IIb)delta"},
+        2:{write:"(IIb)delta"},
+        3:{write:"(IIb)delta"},
+        4:{write:"(IIb)delta"}
+        },
+   2:  {
+        0:{write:"(VII)-"},
+        1:{write:"(VII)-"},
+        2:{write:"(VII)-"},
+        3:{write:"(VII)-"},
+        4:{write:"(VII)-"}
+   },
+   3:  { 
+       0:{write:"(VII#)delta"},
+       1:{write:"(VII#)delta"},
+       2:{write:"(VII#)delta"},
+       3:{write:"(VII#)delta"},
+       4:{write:"(VII#)delta"}
+      }
+  
+  },
+  
+1://mixolydian
+   {0: 
+   {0:{write:"major mode"},
+    1:{write:"I"},
+    2:{write:"I7"},
+    3:{write:"IV6 2nd inversion"},
+    4:{write:"IV4 2nd inversion"} 
+   },
+      
+   1:{ 
+     0:{write:"(VII)delta"},
+     1:{write:"(VII)delta"},
+     2:{write:"(VII)delta"},
+     3:{write:"(VII)delta"},
+     4:{write:"(VII)delta"}
+   },
+   2:{
+    0:{write:"I/II"},
+    1:{write:"I/II"},
+    2:{write:"I/II"},
+    3:{write:"I/II"},
+    4:{write:"I/II"}
+      },
+   3:{
+     0:{write:"(V)- 1st inversion"},
+     1:{write:"(V)- 1st inversion"},
+     2:{write:"(V)- 1st inversion"},
+     3:{write:"(V)- 1st inversion"},
+     4:{write:"(V)- 1st inversion"}
+   }
+  },
+2://dorian
+   {0:{
+     0:{write:"minor mode"},
+     1:{write:"I-"},
+     2:{write:"I-6#"},
+     3:{write:"IV4 2nd inversion"},
+     4:{write:"I-9"}
+   },
+      
+    1:{
+     0:{write:"(II)7"},
+     1:{write:"(II)7"},
+     2:{write:"(II)7"},
+     3:{write:"(II)7"},
+     4:{write:"(II)7"}
+     },
+   2:{
+      0:{write:"(VII)delta"},
+      1:{write:"(VII)delta"},
+      2:{write:"(VII)delta"},
+      3:{write:"(VII)delta"},
+      4:{write:"(VII)delta"}
+     },
+   3: {
+      0:{write:"(III)"},
+      1:{write:"(III)"},
+      2:{write:"(III)"},
+      3:{write:"(III)"},
+      4:{write:"(III)"}
+      }
+  },
+  
+3://lydian
+   {0: 
+   {0:{write:"major mode"},
+    1:{write:"I"},
+    2:{write:"(IV#)semidim 2nd inversion"},
+    3:{write:"Idelta"},
+    4:{write:"(II)-7 2nd inversion"} 
+   },
+      
+    1:{
+     0:{write:"(VII)7"},
+     1:{write:"(VII)7"},
+     2:{write:"(VII)7"},
+     3:{write:"(VII)7"},
+     4:{write:"(VII)7"}
+     },
+   2:{
+     0:{write:"(II)"},
+     1:{write:"(II)"},
+     2:{write:"(II)"},
+     3:{write:"(II)"},
+     4:{write:"(II)"}
+      },
+   3:{
+     0:{write:"(IV)6 1st inversion"},
+     1:{write:"(IV)6 1st inversion"},
+     2:{write:"(IV)6 1st inversion"},
+     3:{write:"(IV)6 1st inversion"},
+     4:{write:"(IV)6 1st inversion"}
+     }
+  },
+    
+4://locrian
+   {0: 
+   {0:{write:"minor mode"},
+    1:{write:"I-7"},
+    2:{write:"Idim"},
+    3:{write:"IV- 2nd inversion"},
+    4:{write:"I semidim"} 
+   },
+      
+   1:{
+     0:{write:"(II)4#"},
+     1:{write:"(II)4#"},
+     2:{write:"(II)4#"},
+     3:{write:"(II)4#"},
+     4:{write:"(II)4#"}
+   },
+   2:{
+     0:{write:"(VII)ecc"},
+     1:{write:"(VII)ecc"},
+     2:{write:"(VII)ecc"},
+     3:{write:"(VII)ecc"},
+     4:{write:"(VII)ecc"}
+    },
+   3:{
+     0:{write:"(VII#)dim"},
+     1:{write:"(VII#)dim"},
+     2:{write:"(VII#)dim"},
+     3:{write:"(VII#)dim"},
+     4:{write:"(VII#)dim"}
+   }
+  }
+}
