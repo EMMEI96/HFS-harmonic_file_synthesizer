@@ -378,6 +378,7 @@ function set_chords(){
   player1.detune = pitch + dati[Mode.value][cadence.value][chord.value]["player1"]
   player2.detune = pitch + dati[Mode.value][cadence.value][chord.value]["player2"]
   player3.detune = pitch + dati[Mode.value][cadence.value][chord.value]["player3"]
+  chords_span.innerText = chords_explained[Mode.value][cadence.value][chord.value]["write"]
  
   if(playing){
     if(controller){
