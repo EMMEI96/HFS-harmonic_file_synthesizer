@@ -687,3 +687,23 @@
     margin-top:190px;
     width:1000px;
   } 
+
+#chord_type{
+    
+    width:150px;
+    border: 1px solid #3b31d6;
+    font-size:18px;
+    font-family:Arial;
+    font-weight: bold;
+    padding:5.5px 10.5px;
+    border-radius:20px;
+    color:#181b1c;
+    background:grey;
+    margin-left:700px;
+    
+  }
+
+  #visual{
+    
+    margin-top:40px;
+  }
