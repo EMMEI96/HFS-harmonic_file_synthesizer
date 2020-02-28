@@ -553,9 +553,11 @@ webAudioControlsMidiManager.addMidiListener(function(e) {
     keyboard.setNote(0,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
     keyboard.setNote(0,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
     keyboard.setNote(0,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
+ if(!controller){ 
+      envelope.triggerRelease();
+    }
     playing=false;
     controller = false;
-    envelope.triggerRelease();
   }
  }  
 });
