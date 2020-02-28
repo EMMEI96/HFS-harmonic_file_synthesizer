@@ -518,6 +518,8 @@ function actions(e){
  }
 }
 
+var past=[false,false,false];
+
 webAudioControlsMidiManager.addMidiListener(function(e) {
  
  if(smallBuffer){
@@ -533,8 +535,6 @@ webAudioControlsMidiManager.addMidiListener(function(e) {
    createPlayers();
    set_chords();
    envelope.triggerAttack();
-   //set_chords plays some games with setNote to allow vision of changing chords
-   //I manually fix it
    if(controller){
     keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
     keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
@@ -545,7 +545,9 @@ webAudioControlsMidiManager.addMidiListener(function(e) {
     keyboard.setNote(1,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
   }
    notes.push(e.data[1]);
+   
    controller = true;
+   past.push(controller);
   }
   
   if(e.data[0] == 128) {
@@ -553,12 +555,17 @@ webAudioControlsMidiManager.addMidiListener(function(e) {
     keyboard.setNote(0,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
     keyboard.setNote(0,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
     keyboard.setNote(0,e.data[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
- if(!controller){ 
+    
+    if( (past[past.length-2] && past[past.length-1]) == false ){ 
       envelope.triggerRelease();
+      for(let i =0; i< players.length; i++){
+        players[i].stop();
+      }
     }
+
     playing=false;
     controller = false;
+    past.push(controller);
   }
  }  
 });
-
