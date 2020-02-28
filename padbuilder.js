@@ -461,7 +461,6 @@ if (keyboard.keycodes1.indexOf(e.keyCode) >= 0){
 
 //this is the function called for the events of webAudio components
 //polling
-
 function actions(e){
  if(buffer) {
   if(e.target.id=="mode_input") {
@@ -489,7 +488,6 @@ function actions(e){
       keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
       keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
       keyboard.setNote(0,notes[notes.length-1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
-      
       keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
       keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
       keyboard.setNote(1,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
@@ -499,11 +497,13 @@ function actions(e){
    }
 
    if(e.note[0] == 0) {
-    notes=[]
+    
     keyboard.setNote(0,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player1"])/100);
     keyboard.setNote(0,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player2"])/100);
     keyboard.setNote(0,e.note[1]+(dati[Mode.value][cadence.value][chord.value]["player3"])/100);
+    if(controller){ 
     envelope.triggerRelease();
+  }
     
     playing=false;
     controller = false  
@@ -519,7 +519,6 @@ function actions(e){
 }
 
 var past=[false,false,false];
-
 webAudioControlsMidiManager.addMidiListener(function(e) {
  
  if(smallBuffer){
